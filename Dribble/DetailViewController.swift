@@ -46,6 +46,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         self.detailImage.frame = CGRect(x: 0, y: scrollView.contentOffset.y, width: self.view.frame.size.width, height: self.view.frame.size.height - 100)
+        self.detailLabel.frame = CGRect(x: 0, y: scrollView.contentOffset.y + 450, width: 80, height: 15)
         let progress = 300 - scrollView.contentOffset.y
         if scrollView.contentOffset.y > 0 {
             self.detailImage.alpha = progress / 300
