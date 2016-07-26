@@ -23,13 +23,12 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        self.detailImage.contentMode = .ScaleAspectFill
         self.scrollView.addSubview(detailImage)
         self.detailLabel.text = self.label.text
-        self.detailLabel.frame = CGRect(x: 50, y: 450, width: 80, height: 15)
+        self.detailLabel.frame = CGRect(x: 50, y: 450, width: 200, height: 50)
+        self.detailLabel.textColor = UIColor.whiteColor()
         self.scrollView.addSubview(detailLabel)
-        self.detailLabel.adjustsFontSizeToFitWidth = true
-        self.detailLabel.sizeToFit()
+        self.detailLabel.font = UIFont(name: "STHeitiTC-Light", size: 35)
         self.scrollView.delegate = self
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1500)
         //self.drawRact()
@@ -43,6 +42,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(DetailViewController.edgePanGesture(_:)))
         edgePan.edges = .Left
         self.view.addGestureRecognizer(edgePan)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

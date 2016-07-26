@@ -25,7 +25,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.dataSource = self
         collectionView.delegate   = self
         collectionView.backgroundColor = UIColor.clearColor()
-        
         //self.navigationController?.navigationBarHidden = true
         let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.shake))
         ges.delegate = self
@@ -47,6 +46,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == UINavigationControllerOperation.Push {
             return CustomTransitionAnimation()
@@ -64,6 +67,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellImage.image = UIImage(named: imgArray[indexPath.row])
         cell.cellLabel.text = ttlArray[indexPath.row]
         cell.cellLabel.adjustsFontSizeToFitWidth = true
+        cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
         cell.layer.cornerRadius = 10
         return cell
     }
