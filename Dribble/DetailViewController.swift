@@ -51,11 +51,11 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         if scrollView.contentOffset.y > 0 {
             self.detailImage.alpha = progress / 300
         }
-        if scrollView.contentOffset.y > 600 {
-            self.detailLabel.frame = CGRect(x: 20, y: 900, width: 80, height: 15)
+        if scrollView.contentOffset.y > 300 {
+            self.detailLabel.frame = CGRect(x: 20, y: 750, width: 80, height: 15)
             self.detailImage.removeFromSuperview()
 
-        }else if scrollView.contentOffset.y < 600 {
+        }else if scrollView.contentOffset.y < 300 {
             self.detailLabel.frame = CGRect(x: 20, y: scrollView.contentOffset.y + 450, width: 80, height: 15)
             self.scrollView.addSubview(self.detailImage)
 
