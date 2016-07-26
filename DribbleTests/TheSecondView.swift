@@ -18,6 +18,6 @@ class TheSecondView {
     }
     
     func customizedView() {
-        self.label.text = "EXAMPLE"
+        self.label.text = "Swift"
     }
 }
