@@ -23,6 +23,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.detailImage.contentMode = .ScaleAspectFill
         self.scrollView.addSubview(detailImage)
         self.detailLabel.text = self.label.text
         self.detailLabel.frame = CGRect(x: 50, y: 450, width: 80, height: 15)

@@ -79,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             DestinationView.image = self.selectedCell.cellImage.image
             DestinationView.label = self.selectedCell.cellLabel
             if DestinationView.label.text! == "Taylor Swift" {
-                DestinationView.view.backgroundColor = UIColor.blueColor()
+                DestinationView.view.backgroundColor = UIColor.whiteColor()
                 let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label)
                 cus.customizedView()
             }else if DestinationView.label.text == "2" {
@@ -119,11 +119,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     }, completion: { (Bool) in
                         self.collectionView(self.collectionView, didSelectItemAtIndexPath: indexPath)
                 })
-            }else if state == UIGestureRecognizerState.Changed {
-                UIView.animateWithDuration(0.5, animations: {
-                    item.alpha = 1
-                })
             }
+            
         }
     }
 
