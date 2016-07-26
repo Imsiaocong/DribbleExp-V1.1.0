@@ -78,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let DestinationView = segue.destinationViewController as! DetailViewController
             DestinationView.image = self.selectedCell.cellImage.image
             DestinationView.label = self.selectedCell.cellLabel
-            if DestinationView.label.text! == "1" {
+            if DestinationView.label.text! == "Taylor Swift" {
                 DestinationView.view.backgroundColor = UIColor.blueColor()
                 let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label)
                 cus.customizedView()

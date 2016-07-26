@@ -22,7 +22,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.detailImage.frame = CGRect(x: 0, y: 0, width: 600, height: 500)
+        self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         self.scrollView.addSubview(detailImage)
         self.detailLabel.text = self.label.text
         self.detailLabel.frame = CGRect(x: 50, y: 450, width: 80, height: 5)
@@ -45,11 +45,18 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        self.detailImage.frame = CGRect(x: 0, y: scrollView.contentOffset.y, width: self.view.frame.size.width, height: self.view.frame.size.height - 100)
-        self.detailLabel.frame = CGRect(x: 0, y: scrollView.contentOffset.y + 450, width: 80, height: 15)
+        self.detailImage.frame = CGRect(x: 0, y: scrollView.contentOffset.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.detailLabel.frame = CGRect(x: 20, y: scrollView.contentOffset.y + 450, width: 80, height: 15)
         let progress = 300 - scrollView.contentOffset.y
         if scrollView.contentOffset.y > 0 {
             self.detailImage.alpha = progress / 300
+        }
+        if scrollView.contentOffset.y > 600 {
+            self.detailImage.removeFromSuperview()
+            self.detailLabel.removeFromSuperview()
+        }else if scrollView.contentOffset.y < 600 {
+            self.scrollView.addSubview(self.detailImage)
+            self.scrollView.addSubview(self.detailLabel)
         }
     }
     /*
