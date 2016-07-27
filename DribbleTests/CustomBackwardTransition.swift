@@ -20,9 +20,9 @@ class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning 
         let container = transitionContext.containerView()
         
         let snapshotView = fromVC.view.snapshotViewAfterScreenUpdates(false)
-        //let snapshotLabel = fromVC.detailLabel.snapshotViewAfterScreenUpdates(false)
+        let snapshotLabel = fromVC.detailLabel.snapshotViewAfterScreenUpdates(false)
         snapshotView.frame = container!.convertRect(fromVC.detailImage.frame, fromView: fromVC.view)
-        //snapshotLabel.frame = container!.convertRect(fromVC.detailLabel.frame, fromView: fromVC.view)
+        snapshotLabel.frame = container!.convertRect(fromVC.detailLabel.frame, fromView: fromVC.view)
         fromVC.detailImage.hidden = true
         fromVC.detailLabel.hidden = true
         
@@ -36,12 +36,12 @@ class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning 
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             snapshotView.frame = container!.convertRect(toVC.selectedCell.cellImage.frame, fromView: toVC.selectedCell)
-            //snapshotLabel.frame = container!.convertRect(toVC.selectedCell.cellLabel.frame, fromView: toVC.selectedCell)
+            snapshotLabel.frame = container!.convertRect(toVC.selectedCell.cellLabel.frame, fromView: toVC.selectedCell)
             fromVC.view.alpha = 0
         }) { (finish: Bool) -> Void in
             toVC.selectedCell.cellImage.hidden = false
             toVC.selectedCell.cellLabel.hidden = false
-            //snapshotLabel.removeFromSuperview()
+            snapshotLabel.removeFromSuperview()
             snapshotView.removeFromSuperview()
             fromVC.detailImage.hidden = false
             fromVC.detailLabel.hidden = false
