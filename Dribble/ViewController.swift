@@ -86,8 +86,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 DestinationView.view.backgroundColor = UIColor.whiteColor()
                 let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label)
                 cus.customizedView()
-            }else if DestinationView.label.text == "2" {
-                DestinationView.view.backgroundColor = UIColor.brownColor()
+            }else if DestinationView.label.text == "Concerts" {
+                DestinationView.view.backgroundColor = UIColor.whiteColor()
             }else if DestinationView.label.text == "3" {
                 DestinationView.view.backgroundColor = UIColor.cyanColor()
             }else if DestinationView.label.text == "4" {

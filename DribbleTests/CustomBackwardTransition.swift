@@ -19,7 +19,7 @@ class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning 
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! ViewController
         let container = transitionContext.containerView()
         
-        let snapshotView = fromVC.view.snapshotViewAfterScreenUpdates(false)
+        let snapshotView = fromVC.detailImage.snapshotViewAfterScreenUpdates(false)
         let snapshotLabel = fromVC.detailLabel.snapshotViewAfterScreenUpdates(false)
         snapshotView.frame = container!.convertRect(fromVC.detailImage.frame, fromView: fromVC.view)
         snapshotLabel.frame = container!.convertRect(fromVC.detailLabel.frame, fromView: fromVC.view)
