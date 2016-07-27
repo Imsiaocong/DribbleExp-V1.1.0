@@ -21,6 +21,7 @@
 		01C637581D293FC40044DD89 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C637571D293FC40044DD89 /* CollectionViewCell.swift */; };
 		01C6375C1D2940C60044DD89 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6375B1D2940C60044DD89 /* DetailViewController.swift */; };
 		01C6375E1D2940E70044DD89 /* CustomTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */; };
+		01FF9CA31D490760002A9ECE /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		01C637571D293FC40044DD89 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		01C6375B1D2940C60044DD89 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTransitionAnimation.swift; path = ../Dribble/CustomTransitionAnimation.swift; sourceTree = "<group>"; };
+		01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		019A4B5F1D3BCC740073277D /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */,
 				01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */,
 				011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */,
 				019A4B601D3BCD0A0073277D /* WeatherInfo.swift */,
@@ -304,6 +307,7 @@
 				01C6375E1D2940E70044DD89 /* CustomTransitionAnimation.swift in Sources */,
 				011B0E681D412DEE00217424 /* CustomBackwardTransition.swift in Sources */,
 				01C637581D293FC40044DD89 /* CollectionViewCell.swift in Sources */,
+				01FF9CA31D490760002A9ECE /* CLTypingLabel.swift in Sources */,
 				013363151D3B7B3400346D8F /* TheSecondView.swift in Sources */,
 				019A4B5E1D3BCC700073277D /* SwiftyJSON.swift in Sources */,
 				01C6375C1D2940C60044DD89 /* DetailViewController.swift in Sources */,
