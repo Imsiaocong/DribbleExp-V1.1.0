@@ -82,28 +82,71 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let DestinationView = segue.destinationViewController as! DetailViewController
             DestinationView.image = self.selectedCell.cellImage.image
             DestinationView.label = self.selectedCell.cellLabel
+            
+            
             if DestinationView.label.text! == "Taylor Swift" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor.whiteColor()
-                let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label)
+                let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
                 cus.customizedView()
+                
+                
+                
             }else if DestinationView.label.text == "Concerts" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor.whiteColor()
+                
+                
             }else if DestinationView.label.text == "3" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor.cyanColor()
+                
+                
             }else if DestinationView.label.text == "4" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor.darkGrayColor()
+                
+                
             }else if DestinationView.label.text == "5" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor.clearColor()
+                
+                
             }else if DestinationView.label.text == "6" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor(red: 0.281, green: 0.412, blue: 0.245, alpha: 0.5)
+                
+                
             }else if DestinationView.label.text == "7" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor(red: 0.534, green: 0.412, blue: 0.245, alpha: 0.5)
+                
+                
             }else if DestinationView.label.text == "8" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor(red: 0.334, green: 0.412, blue: 0.245, alpha: 0.5)
+                
+                
             }else if DestinationView.label.text == "9" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor(red: 0.934, green: 0.412, blue: 0.245, alpha: 0.5)
+                
+                
             }else if DestinationView.label.text == "0" {
+                
+                
                 DestinationView.view.backgroundColor = UIColor(red: 1.234, green: 0.412, blue: 0.245, alpha: 0.5)
+                
+                
             }
         }
     }
