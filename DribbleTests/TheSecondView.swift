@@ -11,15 +11,16 @@ import UIKit
 class TheSecondView {
     private let designatedView: UIViewController!
     private let label: UILabel!
-    private let extra: UIView!
+    private var extra: UIView!
     
     init(desitination: UIViewController, label: UILabel, extra: UIView) {
         self.designatedView = desitination
         self.label = label
-        self.extra = nil
+        self.extra = extra
     }
     
     func customizedView() {
         self.label.text = "Taylor Swift"
+        self.extra = nil
     }
 }
