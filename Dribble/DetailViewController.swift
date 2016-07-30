@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum didFinish {
+    case yes
+    case no
+}
+
 class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     var detailView: UIView!
     var detailImage = UIImageView()
@@ -97,14 +102,17 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         let progress = edgePan.translationInView(self.view).x / self.view.bounds.width
         
         if edgePan.state == UIGestureRecognizerState.Began {
+        self.extra.removeFromSuperview()
         self.percentDrivenTransition = UIPercentDrivenInteractiveTransition()
             self.navigationController?.popViewControllerAnimated(true)
         } else if edgePan.state == UIGestureRecognizerState.Changed {
             self.percentDrivenTransition?.updateInteractiveTransition(progress)
         } else if edgePan.state == UIGestureRecognizerState.Cancelled || edgePan.state == UIGestureRecognizerState.Ended {
             if progress > 0.5 {
+                self.detailView.addSubview(extra)
                 self.percentDrivenTransition?.finishInteractiveTransition()
             } else {
+                self.detailView.addSubview(extra)
                 self.percentDrivenTransition?.cancelInteractiveTransition()
             }
             self.percentDrivenTransition = nil
