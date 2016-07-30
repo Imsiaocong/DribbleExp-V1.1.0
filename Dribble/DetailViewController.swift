@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UITextViewDelegate {
-    var detailTextView: UITextView!
+    var detailView: UIView!
     var detailImage = UIImageView()
     var detailLabel = UILabel()
     var words = CLTypingLabel()
@@ -28,12 +28,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         self.words.pauseTyping()
         self.extra = words
         
-        self.detailTextView = UITextView()
-        self.detailTextView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
-        self.detailTextView.text = ""
-        self.scrollView.addSubview(detailTextView)
-        self.detailTextView.delegate = self
-        self.detailTextView.addSubview(extra)
+        self.detailView = UIView()
+        self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
+        self.scrollView.addSubview(detailView)
+        self.detailView.addSubview(extra)
         
         self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         self.scrollView.addSubview(detailImage)
@@ -99,7 +97,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         let progress = edgePan.translationInView(self.view).x / self.view.bounds.width
         
         if edgePan.state == UIGestureRecognizerState.Began {
-            self.percentDrivenTransition = UIPercentDrivenInteractiveTransition()
+        self.percentDrivenTransition = UIPercentDrivenInteractiveTransition()
             self.navigationController?.popViewControllerAnimated(true)
         } else if edgePan.state == UIGestureRecognizerState.Changed {
             self.percentDrivenTransition?.updateInteractiveTransition(progress)

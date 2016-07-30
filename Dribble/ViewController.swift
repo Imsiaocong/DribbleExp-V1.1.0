@@ -85,39 +85,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             
             if DestinationView.label.text! == "Taylor Swift" {
+               DestinationView.view.backgroundColor = UIColor.whiteColor()
+            let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
+                cus.customizedView()
+                
+                
+                
+            }else if DestinationView.label.text == "Albums" {
                 
                 
                 DestinationView.view.backgroundColor = UIColor.whiteColor()
-                let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
-                cus.customizedView()
-                
                 
                 
             }else if DestinationView.label.text == "Concerts" {
                 
                 
-                DestinationView.view.backgroundColor = UIColor.whiteColor()
-                
-                
-            }else if DestinationView.label.text == "3" {
-                
-                
                 DestinationView.view.backgroundColor = UIColor.cyanColor()
                 
                 
-            }else if DestinationView.label.text == "4" {
+            }else if DestinationView.label.text == "Website" {
                 
                 
                 DestinationView.view.backgroundColor = UIColor.darkGrayColor()
                 
                 
-            }else if DestinationView.label.text == "5" {
+            }else if DestinationView.label.text == "Blog" {
                 
                 
                 DestinationView.view.backgroundColor = UIColor.clearColor()
                 
                 
-            }else if DestinationView.label.text == "6" {
+            }else if DestinationView.label.text == "Fans" {
                 
                 
                 DestinationView.view.backgroundColor = UIColor(red: 0.281, green: 0.412, blue: 0.245, alpha: 0.5)
