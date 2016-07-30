@@ -9,6 +9,7 @@
 import UIKit
 
 class TheSecondView {
+    
     private let designatedView: UIViewController!
     private let label: UILabel!
     private var extra: UIView!
