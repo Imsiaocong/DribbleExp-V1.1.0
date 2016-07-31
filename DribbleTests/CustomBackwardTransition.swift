@@ -7,8 +7,20 @@
 //
 
 import UIKit
-
+/*
+class transparentLayer {
+    class func initializing()-> UIImageView{
+        let cusImage = UIImageView()
+        cusImage.image = UIImage(named: "0")
+        cusImage.frame = CGRect(x: 0, y: 0, width: 600, height: 600)
+        cusImage.contentMode = .ScaleAspectFill
+        return cusImage
+    }
+}
+*/
 class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    //let a = transparentLayer.initializing()
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
