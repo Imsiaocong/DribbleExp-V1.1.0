@@ -89,8 +89,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
                 cus.customizedView()
                 
-                
-                
             }else if DestinationView.label.text == "Albums" {
                 
                 
