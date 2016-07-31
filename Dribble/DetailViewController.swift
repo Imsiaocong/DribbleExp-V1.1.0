@@ -19,7 +19,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     var detailLabel = UILabel()
     var words = CLTypingLabel()
     var extra: UIView!
-    var transparentLayer: UIImageView!
     //@IBOutlet weak var detailView: UIView!
     var image: UIImage!
     var label: UILabel!
@@ -33,13 +32,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         self.words.text = "> I Want To Attend WWDC 2017."
         self.words.pauseTyping()
         self.extra = words
-        
-        self.transparentLayer = UIImageView()
-        for index in 0..<10 {
-            self.transparentLayer.image = UIImage(named: "\(index)")
-        }
-        self.transparentLayer.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        self.scrollView.addSubview(transparentLayer)
         
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
