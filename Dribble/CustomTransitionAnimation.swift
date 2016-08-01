@@ -62,7 +62,9 @@ class CustomTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning
             snapshotDesc.removeFromSuperview()
             //一定要记得动画完成后执行此方法，让系统管理 navigation
             transitionContext.completeTransition(true)
-            toView.moveToOffSet()
+            UIView.animateWithDuration(1, animations: {
+                toView.moveToOffSet()
+            })
         }
     }
     
