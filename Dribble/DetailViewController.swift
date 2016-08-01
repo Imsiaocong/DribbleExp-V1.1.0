@@ -24,6 +24,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     var label: UILabel!
     var picLayer: CAShapeLayer!
     var model: AnyObject!
+    let offSet = CGPoint(x: 0, y: 600)
     private var percentDrivenTransition: UIPercentDrivenInteractiveTransition?
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -82,6 +83,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
             self.words.continueTyping()
             scrollView.scrollEnabled = false
         }
+    }
+    
+    func moveToOffSet() {
+        self.scrollView.setContentOffset(offSet, animated: true)
     }
     /*
     func drawRact() {
