@@ -32,7 +32,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -48,6 +47,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print("\(scrollView.contentOffset.x) y:\(scrollView.contentOffset.y)")
+        
+        let point = CGPoint(x: 340, y: 0)
+        if scrollView.contentOffset.x > 170 {
+            UIView.animateWithDuration(0.1, animations: { 
+                scrollView.setContentOffset(point, animated: true)
+            })
+        }
     }
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
