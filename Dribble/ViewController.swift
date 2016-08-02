@@ -26,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.delegate   = self
         collectionView.backgroundColor = UIColor.clearColor()
         //self.navigationController?.navigationBarHidden = true
-        let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.shake))
+        let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.didPress))
         ges.delegate = self
         self.view.addGestureRecognizer(ges)
         //
@@ -147,7 +147,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    func shake(gesture: UILongPressGestureRecognizer) {
+    func didPress(gesture: UILongPressGestureRecognizer) {
         let point = gesture.locationInView(self.collectionView)
         if let indexPath : NSIndexPath = (self.collectionView?.indexPathForItemAtPoint(point)){
             let state = gesture.state
