@@ -30,10 +30,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.words.text = "> I Want To Attend WWDC 2017."
-        //self.words.pauseTyping()
-        //self.extra = words
-        self.extra = UIView()
+        self.words.text = "> I Want To Attend WWDC 2017."
+        self.words.pauseTyping()
+        self.extra = words
+        
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
         self.scrollView.addSubview(detailView)
@@ -48,7 +48,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         self.detailLabel.font = UIFont(name: "STHeitiTC-Light", size: 35)
         self.scrollView.delegate = self
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 1500)
-        
+        self.detailView.userInteractionEnabled = true
         //self.drawRact()
         //WeatherInfo().parsingURL()
     }
@@ -81,14 +81,27 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         if scrollView.contentOffset.y > 430 {
             self.detailLabel.frame = CGRect(x: 50, y: scrollView.contentOffset.y + 20, width: 200, height: 50)
             self.words.continueTyping()
-            //scrollView.scrollEnabled = false
         }
     }
     
-    //func moveToOffSet() {
-    //    self.scrollView.setContentOffset(offSet, animated: true)
-    //}
-
+    func moveToOffSet() {
+        self.scrollView.setContentOffset(offSet, animated: true)
+    }
+    /*
+    func drawRact() {
+        
+        self.picLayer = CAShapeLayer()
+        self.picLayer.fillColor = UIColor.blackColor().CGColor
+        self.detailImage.layer.mask = self.picLayer
+        
+        let path = UIBezierPath()
+        path.moveToPoint(CGPointMake(0, 0))
+        path.addLineToPoint(CGPointMake(self.detailImage.frame.size.width, 0))
+        path.addLineToPoint(CGPointMake(self.detailImage.frame.size.width, self.detailImage.frame.size.height))
+        path.addLineToPoint(CGPointMake(0, self.detailImage.frame.size.height - 100))
+        self.picLayer.path = path.CGPath
+    }
+    */
     func edgePanGesture(edgePan: UIScreenEdgePanGestureRecognizer) {
         let progress = edgePan.translationInView(self.view).x / self.view.bounds.width
         

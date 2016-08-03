@@ -13,6 +13,7 @@ class TheSecondView {
     private let designatedView: UIViewController!
     private let label: UILabel!
     private var extra: UIView!
+    private let frame = CGRect(x: 0, y: 0, width: 600, height: 1000)
     
     init(desitination: UIViewController, label: UILabel, extra: UIView) {
         self.designatedView = desitination
@@ -180,4 +181,3 @@ class ExtraViewController: UIViewController {
     }
     
 }
-
