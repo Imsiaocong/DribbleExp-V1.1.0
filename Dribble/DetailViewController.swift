@@ -88,21 +88,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     func moveToOffSet() {
         self.scrollView.setContentOffset(offSet, animated: true)
     }
-    /*
-    func drawRact() {
-        
-        self.picLayer = CAShapeLayer()
-        self.picLayer.fillColor = UIColor.blackColor().CGColor
-        self.detailImage.layer.mask = self.picLayer
-        
-        let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(0, 0))
-        path.addLineToPoint(CGPointMake(self.detailImage.frame.size.width, 0))
-        path.addLineToPoint(CGPointMake(self.detailImage.frame.size.width, self.detailImage.frame.size.height))
-        path.addLineToPoint(CGPointMake(0, self.detailImage.frame.size.height - 100))
-        self.picLayer.path = path.CGPath
-    }
-    */
+
     func edgePanGesture(edgePan: UIScreenEdgePanGestureRecognizer) {
         let progress = edgePan.translationInView(self.view).x / self.view.bounds.width
         
