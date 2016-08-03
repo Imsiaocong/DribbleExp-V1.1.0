@@ -55,7 +55,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let data = NSData(contentsOfURL: url!)
         let json = JSON(data: data!)
         if let name = json["weather"][0]["main"].string{
-            
+            print(json)
             self.temp.text = name
             
         }
