@@ -30,10 +30,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.words.text = "> I Want To Attend WWDC 2017."
-        self.words.pauseTyping()
-        self.extra = words
-        
+        //self.words.text = "> I Want To Attend WWDC 2017."
+        //self.words.pauseTyping()
+        //self.extra = words
+        self.extra = UIView()
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
         self.scrollView.addSubview(detailView)
@@ -72,8 +72,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         if scrollView.contentOffset.y > 0 {
             self.detailImage.alpha = progress / 300
         }
-        if scrollView.contentOffset.y > 150 {
-            self.detailImage.alpha = 0.5
+        if scrollView.contentOffset.y > 300 {
+            self.detailImage.alpha = 0
         }else if scrollView.contentOffset.y < 300 {
             self.scrollView.addSubview(self.detailImage)
             self.scrollView.addSubview(self.detailLabel)
@@ -81,13 +81,13 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         if scrollView.contentOffset.y > 430 {
             self.detailLabel.frame = CGRect(x: 50, y: scrollView.contentOffset.y + 20, width: 200, height: 50)
             self.words.continueTyping()
-            scrollView.scrollEnabled = false
+            //scrollView.scrollEnabled = false
         }
     }
     
-    func moveToOffSet() {
-        self.scrollView.setContentOffset(offSet, animated: true)
-    }
+    //func moveToOffSet() {
+    //    self.scrollView.setContentOffset(offSet, animated: true)
+    //}
 
     func edgePanGesture(edgePan: UIScreenEdgePanGestureRecognizer) {
         let progress = edgePan.translationInView(self.view).x / self.view.bounds.width

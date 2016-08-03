@@ -63,7 +63,7 @@ class CustomTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning
             //一定要记得动画完成后执行此方法，让系统管理 navigation
             transitionContext.completeTransition(true)
             UIView.animateWithDuration(1, animations: {
-                toView.moveToOffSet()
+                //toView.moveToOffSet()
             })
         }
     }
