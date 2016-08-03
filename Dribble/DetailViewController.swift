@@ -17,7 +17,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     var detailView: UIView!
     var detailImage = UIImageView()
     var detailLabel = UILabel()
-    var words = CLTypingLabel()
+    //var words = CLTypingLabel()
     var extra: UIView!
     //@IBOutlet weak var detailView: UIView!
     var image: UIImage!
@@ -30,10 +30,10 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.words.text = "> I Want To Attend WWDC 2017."
-        self.words.pauseTyping()
-        self.extra = words
-        
+        //self.words.text = "> I Want To Attend WWDC 2017."
+        //self.words.pauseTyping()
+        //self.extra = words
+        self.extra = UIView()
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
         self.scrollView.addSubview(detailView)
@@ -80,7 +80,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         }
         if scrollView.contentOffset.y > 430 {
             self.detailLabel.frame = CGRect(x: 50, y: scrollView.contentOffset.y + 20, width: 200, height: 50)
-            self.words.continueTyping()
+            //self.words.continueTyping()
         }
     }
     
