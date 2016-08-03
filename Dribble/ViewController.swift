@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedCell = CollectionViewCell()
     var image: UIImage!
@@ -29,7 +30,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.didPress))
         ges.delegate = self
         self.view.addGestureRecognizer(ges)
-        //
+        self.parsingURL()
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
     }
@@ -49,12 +50,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return true
     }
     
+    func parsingURL() {
+        let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=Zhoushan&APPID=06ddf21c52f06e793a7fdcd658c4d998")
+        let data = NSData(contentsOfURL: url!)
+        let json = JSON(data: data!)
+        if let name = json["weather"][0]["main"].string{
+            
+            self.temp.text = name
+            
+        }
+    }
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print("\(scrollView.contentOffset.x) y:\(scrollView.contentOffset.y)")
         
         let point = CGPoint(x: 340, y: 0)
         if scrollView.contentOffset.x > 170 {
-            UIView.animateWithDuration(0.1, animations: { 
+            UIView.animateWithDuration(0.1, animations: {
                 scrollView.setContentOffset(point, animated: true)
             })
         }

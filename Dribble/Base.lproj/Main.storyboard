@@ -73,18 +73,33 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73q-X0-qPp">
+                                <rect key="frame" x="20" y="100" width="473" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="473" id="RLv-Dj-PXm"/>
+                                    <constraint firstAttribute="height" constant="21" id="qgB-D2-ah6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="uPI-6m-Bwm" secondAttribute="bottom" constant="246" id="5Nw-Le-iEo"/>
                             <constraint firstItem="xXB-Q4-kxc" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" id="5mC-yK-iVO"/>
+                            <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="73q-X0-qPp" secondAttribute="bottom" constant="145" id="HWq-0O-V0J"/>
                             <constraint firstItem="sCM-Z2-iH5" firstAttribute="top" secondItem="xXB-Q4-kxc" secondAttribute="bottom" id="JOY-Lj-65S"/>
+                            <constraint firstAttribute="trailing" secondItem="73q-X0-qPp" secondAttribute="trailing" constant="107" id="VoV-H4-PZ1"/>
+                            <constraint firstItem="73q-X0-qPp" firstAttribute="top" secondItem="uPI-6m-Bwm" secondAttribute="bottom" constant="80" id="qun-Qp-Q49"/>
+                            <constraint firstItem="73q-X0-qPp" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" constant="20" id="xFy-oO-ah9"/>
                             <constraint firstAttribute="trailing" secondItem="xXB-Q4-kxc" secondAttribute="trailing" id="zII-UT-Ok9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MA5-TZ-SQF"/>
                     <connections>
                         <outlet property="collectionView" destination="xXB-Q4-kxc" id="ppr-dL-QN3"/>
+                        <outlet property="temp" destination="73q-X0-qPp" id="SrU-ac-wQw"/>
                         <segue destination="iwn-94-ZPJ" kind="show" identifier="ShowDetail" id="EIP-dq-yKJ"/>
                     </connections>
                 </viewController>

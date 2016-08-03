@@ -10,7 +10,6 @@
 		011B0E681D412DEE00217424 /* CustomBackwardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */; };
 		013363151D3B7B3400346D8F /* TheSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013363141D3B7B3400346D8F /* TheSecondView.swift */; };
 		019A4B5E1D3BCC700073277D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A4B5D1D3BCC700073277D /* SwiftyJSON.swift */; };
-		019A4B611D3BCD0A0073277D /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A4B601D3BCD0A0073277D /* WeatherInfo.swift */; };
 		01C6372A1D293B460044DD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C637291D293B460044DD89 /* AppDelegate.swift */; };
 		01C6372C1D293B460044DD89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6372B1D293B460044DD89 /* ViewController.swift */; };
 		01C6372F1D293B460044DD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C6372D1D293B460044DD89 /* Main.storyboard */; };
@@ -45,7 +44,6 @@
 		011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackwardTransition.swift; sourceTree = "<group>"; };
 		013363141D3B7B3400346D8F /* TheSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheSecondView.swift; sourceTree = "<group>"; };
 		019A4B5D1D3BCC700073277D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		019A4B601D3BCD0A0073277D /* WeatherInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		01C637261D293B460044DD89 /* Dribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C637291D293B460044DD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C6372B1D293B460044DD89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */,
 				01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */,
 				011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */,
-				019A4B601D3BCD0A0073277D /* WeatherInfo.swift */,
 				019A4B5D1D3BCC700073277D /* SwiftyJSON.swift */,
 			);
 			name = Supports;
@@ -301,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019A4B611D3BCD0A0073277D /* WeatherInfo.swift in Sources */,
 				01C6372C1D293B460044DD89 /* ViewController.swift in Sources */,
 				01C6372A1D293B460044DD89 /* AppDelegate.swift in Sources */,
 				01C6375E1D2940E70044DD89 /* CustomTransitionAnimation.swift in Sources */,
