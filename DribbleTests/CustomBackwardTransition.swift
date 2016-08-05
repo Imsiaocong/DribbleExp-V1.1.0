@@ -41,18 +41,21 @@ class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning 
         toVC.view.frame = transitionContext.finalFrameForViewController(toVC)
         toVC.selectedCell.cellImage.hidden = true
         toVC.selectedCell.cellLabel.hidden = true
+        toVC.blur.alpha = 1
         
         container!.insertSubview(toVC.view, belowSubview: fromVC.view)
         container!.addSubview(snapshotView)
         //container!.addSubview(snapshotLabel)
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            toVC.blur.alpha = 0
             snapshotView.frame = container!.convertRect(toVC.selectedCell.cellImage.frame, fromView: toVC.selectedCell)
             snapshotLabel.frame = container!.convertRect(toVC.selectedCell.cellLabel.frame, fromView: toVC.selectedCell)
             fromVC.view.alpha = 0
         }) { (finish: Bool) -> Void in
             toVC.selectedCell.cellImage.hidden = false
             toVC.selectedCell.cellLabel.hidden = false
+            toVC.blur.removeFromSuperview()
             snapshotLabel.removeFromSuperview()
             snapshotView.removeFromSuperview()
             fromVC.detailImage.hidden = false

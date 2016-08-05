@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var image: UIImage!
     var label: UILabel!
     var replica = UIImageView()
+    var blur: UIVisualEffectView!
     let customAnimation = CustomTransitionAnimation()
     let imgArray = ["0","1","2","3","4"]
     let ttlArray = ["Taylor Swift","Albums","Concerts","Website","Blog"]
@@ -33,6 +34,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.parsingURL()
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
+        self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -108,6 +110,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         self.selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CollectionViewCell
         self.performSegueWithIdentifier("ShowDetail", sender: nil)
+        
+        blur.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        self.view.addSubview(blur)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

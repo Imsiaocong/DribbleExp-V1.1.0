@@ -31,6 +31,7 @@ class CustomTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning
         fromView.selectedCell.cellLabel.hidden = true
         toView.detailLabel.hidden = true
         fromView.selectedCell.cellLabel.sizeToFit()
+        fromView.blur.alpha = 0
         
         //toView: Set its frame
         toView.view.frame = transitionContext.finalFrameForViewController(toView)//这段看起来没什么用，可删去.
@@ -51,6 +52,7 @@ class CustomTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning
             snapshotView.frame = toView.detailImage.frame
             snapshotLabel.frame = toView.detailLabel.frame
             toView.view.alpha = 1
+            fromView.blur.alpha = 1
         }) { (finish: Bool) in //设置动画结束后的情况.
             fromView.selectedCell.cellImage.hidden = false
             fromView.selectedCell.cellLabel.hidden = false
