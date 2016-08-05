@@ -93,6 +93,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellLabel.adjustsFontSizeToFitWidth = true
         cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
         cell.layer.cornerRadius = 10
+        /*
+        cell.layer.shadowOpacity = 1
+        cell.layer.shadowRadius = 10
+        cell.layer.shadowOffset = CGSizeMake(200, 200)
+        cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).CGPath
+        cell.layer.shouldRasterize = true
+        */
         return cell
     }
     
