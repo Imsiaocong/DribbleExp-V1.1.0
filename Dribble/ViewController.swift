@@ -17,8 +17,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var label: UILabel!
     var replica = UIImageView()
     let customAnimation = CustomTransitionAnimation()
-    let imgArray = ["0","1","2","3","4","5","6","7","8","9"]
-    let ttlArray = ["Taylor Swift","Albums","Concerts","Website","Blog","Fans","grs","vzx","tyut","pkm"]
+    let imgArray = ["0","1","2","3","4"]
+    let ttlArray = ["Taylor Swift","Albums","Concerts","Website","Blog"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             print(name)
             if json["weather"][0]["main"].string == "Clear" {
                 self.weatherImg.image = UIImage(named: "Sunny")
+            }else if json["weather"][0]["main"].string == "Clouds" {
+                self.weatherImg.image = UIImage(named: "Clouds")
             }
             
         }
@@ -117,6 +119,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             if DestinationView.label.text! == "Taylor Swift" {
                DestinationView.view.backgroundColor = UIColor.whiteColor()
+               DestinationView.scrollView.addSubview(DestinationView.detailView)
             let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
                 cus.customizedView()
                 
@@ -142,36 +145,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 
                 
                 DestinationView.view.backgroundColor = UIColor.clearColor()
-                
-                
-            }else if DestinationView.label.text == "Fans" {
-                
-                
-                DestinationView.view.backgroundColor = UIColor(red: 0.281, green: 0.412, blue: 0.245, alpha: 0.5)
-                
-                
-            }else if DestinationView.label.text == "7" {
-                
-                
-                DestinationView.view.backgroundColor = UIColor(red: 0.534, green: 0.412, blue: 0.245, alpha: 0.5)
-                
-                
-            }else if DestinationView.label.text == "8" {
-                
-                
-                DestinationView.view.backgroundColor = UIColor(red: 0.334, green: 0.412, blue: 0.245, alpha: 0.5)
-                
-                
-            }else if DestinationView.label.text == "9" {
-                
-                
-                DestinationView.view.backgroundColor = UIColor(red: 0.934, green: 0.412, blue: 0.245, alpha: 0.5)
-                
-                
-            }else if DestinationView.label.text == "0" {
-                
-                
-                DestinationView.view.backgroundColor = UIColor(red: 1.234, green: 0.412, blue: 0.245, alpha: 0.5)
                 
                 
             }

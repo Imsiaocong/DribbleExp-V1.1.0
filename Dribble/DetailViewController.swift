@@ -36,7 +36,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         self.extra = UIView()
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
-        self.scrollView.addSubview(detailView)
         self.detailView.addSubview(extra)
         
         self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
