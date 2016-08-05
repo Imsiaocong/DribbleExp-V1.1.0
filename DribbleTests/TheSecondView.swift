@@ -103,6 +103,7 @@ class ExtraViewController: UIViewController {
         let delta = trans * 0.6
         
         if pan.state == .Changed {
+            print("Touch Changed")
             if abs(trans) > self.maxLength {
                 pan.enabled = false
                 let imageView = self.imageViews.first
@@ -137,7 +138,6 @@ class ExtraViewController: UIViewController {
                         let first = self.imageViews.removeAtIndex(0)
                         first.removeFromSuperview()
                         self.resueArray.append(first)
-                        
                         self.endAnimation()
                     }
             })

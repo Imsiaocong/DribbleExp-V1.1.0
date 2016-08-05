@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var weatherImg: UIImageView!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedCell = CollectionViewCell()
@@ -57,10 +58,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let name = json["weather"][0]["main"].string{
             print(json)
             self.temp.text = name
+            if self.temp.text == "Clear" {
+                self.weatherImg.image = UIImage(named: "Sunny")
+            }
             
         }
     }
-    
+    /*
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print("\(scrollView.contentOffset.x) y:\(scrollView.contentOffset.y)")
         
@@ -71,7 +75,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             })
         }
     }
-    
+    */
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == UINavigationControllerOperation.Push {
             return CustomTransitionAnimation()

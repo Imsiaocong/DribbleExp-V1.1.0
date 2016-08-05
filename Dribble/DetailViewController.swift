@@ -67,7 +67,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         self.detailImage.frame = CGRect(x: 0, y: scrollView.contentOffset.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        print(scrollView.contentOffset.y)
         let progress = 300 - scrollView.contentOffset.y
         if scrollView.contentOffset.y > 0 {
             self.detailImage.alpha = progress / 300
@@ -81,12 +80,14 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         if scrollView.contentOffset.y > 430 {
             self.detailLabel.frame = CGRect(x: 50, y: scrollView.contentOffset.y + 20, width: 200, height: 50)
             //self.words.continueTyping()
+            //self.scrollView.userInteractionEnabled = false
         }
     }
-    
+    /*
     func moveToOffSet() {
         self.scrollView.setContentOffset(offSet, animated: true)
     }
+ */
     /*
     func drawRact() {
         
