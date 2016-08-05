@@ -73,45 +73,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73q-X0-qPp">
-                                <rect key="frame" x="20" y="100" width="473" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7d8-I1-Ndm">
+                                <rect key="frame" x="20" y="54" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="473" id="RLv-Dj-PXm"/>
-                                    <constraint firstAttribute="height" constant="21" id="qgB-D2-ah6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgk-mI-pRI">
-                                <rect key="frame" x="20" y="129" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="PSP-SQ-wwi"/>
-                                    <constraint firstAttribute="width" constant="80" id="aA7-Bv-ZzJ"/>
+                                    <constraint firstAttribute="width" constant="60" id="Dbx-RR-jfF"/>
+                                    <constraint firstAttribute="height" constant="60" id="S9e-6x-mgf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fgk-mI-pRI" secondAttribute="trailing" constant="500" id="4fi-8M-C7p"/>
                             <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="uPI-6m-Bwm" secondAttribute="bottom" constant="246" id="5Nw-Le-iEo"/>
                             <constraint firstItem="xXB-Q4-kxc" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" id="5mC-yK-iVO"/>
-                            <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="fgk-mI-pRI" secondAttribute="bottom" constant="57" id="F6O-Fg-iug"/>
-                            <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="73q-X0-qPp" secondAttribute="bottom" constant="145" id="HWq-0O-V0J"/>
+                            <constraint firstItem="xXB-Q4-kxc" firstAttribute="top" secondItem="7d8-I1-Ndm" secondAttribute="bottom" constant="152" id="Bgv-T7-hit"/>
                             <constraint firstItem="sCM-Z2-iH5" firstAttribute="top" secondItem="xXB-Q4-kxc" secondAttribute="bottom" id="JOY-Lj-65S"/>
-                            <constraint firstAttribute="trailing" secondItem="73q-X0-qPp" secondAttribute="trailing" constant="107" id="VoV-H4-PZ1"/>
-                            <constraint firstItem="fgk-mI-pRI" firstAttribute="top" secondItem="73q-X0-qPp" secondAttribute="bottom" constant="8" id="jRd-Bs-WIm"/>
-                            <constraint firstItem="fgk-mI-pRI" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" constant="20" id="jsI-6c-dRU"/>
-                            <constraint firstItem="73q-X0-qPp" firstAttribute="top" secondItem="uPI-6m-Bwm" secondAttribute="bottom" constant="80" id="qun-Qp-Q49"/>
-                            <constraint firstItem="73q-X0-qPp" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" constant="20" id="xFy-oO-ah9"/>
+                            <constraint firstItem="7d8-I1-Ndm" firstAttribute="top" secondItem="uPI-6m-Bwm" secondAttribute="bottom" constant="34" id="RT5-7j-4ee"/>
+                            <constraint firstItem="7d8-I1-Ndm" firstAttribute="leading" secondItem="l2X-iS-lzn" secondAttribute="leading" constant="20" id="SM7-TR-wML"/>
+                            <constraint firstAttribute="trailing" secondItem="7d8-I1-Ndm" secondAttribute="trailing" constant="520" id="xD5-g2-tYf"/>
                             <constraint firstAttribute="trailing" secondItem="xXB-Q4-kxc" secondAttribute="trailing" id="zII-UT-Ok9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MA5-TZ-SQF"/>
                     <connections>
                         <outlet property="collectionView" destination="xXB-Q4-kxc" id="ppr-dL-QN3"/>
-                        <outlet property="temp" destination="73q-X0-qPp" id="SrU-ac-wQw"/>
-                        <outlet property="weatherImg" destination="fgk-mI-pRI" id="zA9-cf-Hu4"/>
+                        <outlet property="weatherImg" destination="7d8-I1-Ndm" id="tZf-Cg-yg8"/>
                         <segue destination="iwn-94-ZPJ" kind="show" identifier="ShowDetail" id="EIP-dq-yKJ"/>
                     </connections>
                 </viewController>

@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var weatherImg: UIImageView!
-    @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedCell = CollectionViewCell()
     var image: UIImage!
@@ -29,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.backgroundColor = UIColor.clearColor()
         //self.navigationController?.navigationBarHidden = true
         let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.didPress))
-        ges.delegate = self
+            ges.delegate = self
         self.view.addGestureRecognizer(ges)
         self.parsingURL()
         self.replica.layer.masksToBounds = true
@@ -56,9 +55,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let data = NSData(contentsOfURL: url!)
         let json = JSON(data: data!)
         if let name = json["weather"][0]["main"].string{
-            print(json)
-            self.temp.text = name
-            if self.temp.text == "Clear" {
+            print(name)
+            if json["weather"][0]["main"].string == "Clear" {
                 self.weatherImg.image = UIImage(named: "Sunny")
             }
             
