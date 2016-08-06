@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var selectedCell = CollectionViewCell()
     var image: UIImage!
     var label: UILabel!
+    var headerView: UIView!
     var replica = UIImageView()
     var blur: UIVisualEffectView!
     let customAnimation = CustomTransitionAnimation()
@@ -35,6 +36,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
         self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        self.headerView = UIView()
+        self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
+        self.headerView.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(headerView)
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 4, options: .CurveEaseInOut, animations: {
+            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            }, completion: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -174,6 +182,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
             
         }
+    }
+    
+    func initHeaderView() {
+        self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.headerView.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(headerView)
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
+            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 10)
+            }, completion: nil)
     }
 
 }
