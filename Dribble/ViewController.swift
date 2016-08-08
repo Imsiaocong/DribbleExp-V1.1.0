@@ -15,7 +15,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var selectedCell = CollectionViewCell()
     var image: UIImage!
     var label: UILabel!
-    var headerView: UIView!
+    var headerView: UIVisualEffectView!
     var replica = UIImageView()
     var blur: UIVisualEffectView!
     let customAnimation = CustomTransitionAnimation()
@@ -44,8 +44,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
         self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
-        self.headerView = UIView()
-        self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
+        self.headerView = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
+        self.headerView.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        self.headerView.alpha = 0.8
         self.headerView.backgroundColor = UIColor.blackColor()
         self.view.addSubview(headerView)
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
@@ -208,4 +209,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
 }
-
