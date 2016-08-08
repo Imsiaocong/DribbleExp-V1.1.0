@@ -12,7 +12,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var weatherImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var backgroundPic: UIImageView!
     var selectedCell = CollectionViewCell()
+    var currentImage = ""
     var image: UIImage!
     var label: UILabel!
     var headerView: UIVisualEffectView!
@@ -46,12 +48,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         self.headerView = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
         self.headerView.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        self.headerView.alpha = 0.8
-        self.headerView.backgroundColor = UIColor.blackColor()
+        self.headerView.alpha = 1
+        self.headerView.backgroundColor = UIColor.clearColor()
         self.view.addSubview(headerView)
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)
+
+        //self.backgroundPicture()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -202,8 +206,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func headerViewAnimation2() {
         self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
-        self.headerView.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(headerView)
+
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)

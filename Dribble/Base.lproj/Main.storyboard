@@ -30,6 +30,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" id="bCR-52-B7K">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YxH-Wn-Lxk" customClass="CollectionViewCell" customModule="Dribble" customModuleProvider="target">
                                         <rect key="frame" x="12" y="53" width="277" height="495"/>
@@ -198,4 +202,7 @@
             <point key="canvasLocation" x="562" y="394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="360" height="640"/>
+    </resources>
 </document>
