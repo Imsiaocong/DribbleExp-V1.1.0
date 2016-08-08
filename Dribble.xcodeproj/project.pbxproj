@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010373A11D58D28900C75D1C /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010373A01D58D28900C75D1C /* ViewControllerExtension.swift */; };
 		011B0E681D412DEE00217424 /* CustomBackwardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */; };
 		013363151D3B7B3400346D8F /* TheSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013363141D3B7B3400346D8F /* TheSecondView.swift */; };
 		019A4B5E1D3BCC700073277D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A4B5D1D3BCC700073277D /* SwiftyJSON.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010373A01D58D28900C75D1C /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		011B0E671D412DEE00217424 /* CustomBackwardTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackwardTransition.swift; sourceTree = "<group>"; };
 		013363141D3B7B3400346D8F /* TheSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheSecondView.swift; sourceTree = "<group>"; };
 		019A4B5D1D3BCC700073277D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				01C637291D293B460044DD89 /* AppDelegate.swift */,
 				01C6372B1D293B460044DD89 /* ViewController.swift */,
+				010373A01D58D28900C75D1C /* ViewControllerExtension.swift */,
 				01C637571D293FC40044DD89 /* CollectionViewCell.swift */,
 				01C6375B1D2940C60044DD89 /* DetailViewController.swift */,
 				01C6372D1D293B460044DD89 /* Main.storyboard */,
@@ -306,6 +309,7 @@
 				01FF9CA31D490760002A9ECE /* CLTypingLabel.swift in Sources */,
 				013363151D3B7B3400346D8F /* TheSecondView.swift in Sources */,
 				019A4B5E1D3BCC700073277D /* SwiftyJSON.swift in Sources */,
+				010373A11D58D28900C75D1C /* ViewControllerExtension.swift in Sources */,
 				01C6375C1D2940C60044DD89 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

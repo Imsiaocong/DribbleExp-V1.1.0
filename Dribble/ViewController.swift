@@ -40,7 +40,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.view.addGestureRecognizer(ges3)
         self.view.addGestureRecognizer(ges2)
         self.view.addGestureRecognizer(ges)
-        self.parsingURL()
+        //self.parsingURL()
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
         self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
+    /*
     func parsingURL() {
         let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=Zhoushan&APPID=06ddf21c52f06e793a7fdcd658c4d998")
         let data = NSData(contentsOfURL: url!)
@@ -83,6 +83,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
         }
     }
+ */
     /*
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print("\(scrollView.contentOffset.x) y:\(scrollView.contentOffset.y)")
