@@ -48,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
         self.headerView.backgroundColor = UIColor.blackColor()
         self.view.addSubview(headerView)
-        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: { 
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)
     }
@@ -194,7 +194,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func headerViewAnimation() {
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
-            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 10)
+            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
             }, completion: nil)
     }
     
