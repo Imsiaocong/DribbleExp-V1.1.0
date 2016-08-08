@@ -31,6 +31,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //self.navigationController?.navigationBarHidden = true
         let ges = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.didPress))
             ges.delegate = self
+        let ges2 = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.headerViewAnimation))
+            ges2.direction = .Up
+            ges2.delegate = self
+        let ges3 = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.headerViewAnimation2))
+        ges3.direction = .Down
+        ges3.delegate = self
+        self.view.addGestureRecognizer(ges3)
+        self.view.addGestureRecognizer(ges2)
         self.view.addGestureRecognizer(ges)
         self.parsingURL()
         self.replica.layer.masksToBounds = true
@@ -40,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
         self.headerView.backgroundColor = UIColor.blackColor()
         self.view.addSubview(headerView)
-        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 4, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: { 
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)
     }
@@ -184,12 +192,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    func initHeaderView() {
-        self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    func headerViewAnimation() {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
+            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 10)
+            }, completion: nil)
+    }
+    
+    func headerViewAnimation2() {
+        self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
         self.headerView.backgroundColor = UIColor.blackColor()
         self.view.addSubview(headerView)
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
-            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 10)
+            self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)
     }
 
