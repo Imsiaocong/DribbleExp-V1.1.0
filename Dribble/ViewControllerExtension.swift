@@ -9,11 +9,22 @@
 import UIKit
 
 extension ViewController {
-    func backgroundPicture() {
-        self.backgroundPic = UIImageView()
-        self.backgroundPic = UIImageView(frame: CGRect(x: 0, y: 0, width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height))
-        self.backgroundPic.image = UIImage(named: "1")
-        self.backgroundPic.alpha = 0.2
-        self.collectionView.backgroundView?.addSubview(self.backgroundPic)
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
+        if scrollView.contentOffset.x > 0 && scrollView.contentOffset.x <= 100{
+            self.backgroundPic.image = UIImage(named: "0")
+        }
+        if scrollView.contentOffset.x > 100 && scrollView.contentOffset.x <= 400{
+            self.backgroundPic.image = UIImage(named: "1")
+        }
+        if scrollView.contentOffset.x > 400 && scrollView.contentOffset.x <= 670{
+            self.backgroundPic.image = UIImage(named: "2")
+        }
+        if scrollView.contentOffset.x > 670 && scrollView.contentOffset.x <= 970{
+            self.backgroundPic.image = UIImage(named: "3")
+        }
+        if scrollView.contentOffset.x > 970 && scrollView.contentOffset.x <= 1062{
+            self.backgroundPic.image = UIImage(named: "4")
+        }
     }
 }

@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var headerView: UIVisualEffectView!
     var replica = UIImageView()
     var blur: UIVisualEffectView!
+    var blur2: UIVisualEffectView!
     let customAnimation = CustomTransitionAnimation()
     let imgArray = ["0","1","2","3","4"]
     let ttlArray = ["Taylor Swift","Albums","Concerts","Website","Blog"]
@@ -46,8 +47,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.replica.layer.masksToBounds = true
         self.replica.contentMode = UIViewContentMode.ScaleAspectFill
         self.blur = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        self.blur.effect = UIBlurEffect(style: .Light)
+        self.blur.alpha = 0.9
+        
+        self.blur2 = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height + 100))
+        self.blur2.effect = UIBlurEffect(style: .Light)
+        self.blur2.alpha = 0.9
         self.headerView = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
-        self.headerView.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        self.headerView.effect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
         self.headerView.alpha = 1
         self.headerView.backgroundColor = UIColor.clearColor()
         self.view.addSubview(headerView)
@@ -55,6 +62,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: nil)
 
+        self.backgroundPic.addSubview(blur2)
         //self.backgroundPicture()
     }
     
@@ -136,14 +144,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         blur.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         self.view.addSubview(blur)
     }
-    
+    /*
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        let pointX = scrollView.contentOffset.x
-        let sizeX = self.collectionView.frame.size.width / 2
-        let midX = pointX + sizeX
-        print(midX)
+        print(scrollView.contentOffset.x)
+        if scrollView.contentOffset.x > 0 && scrollView.contentOffset.x <= 100{
+            self.backgroundPic.image = UIImage(named: "0")
+        }
+        if scrollView.contentOffset.x > 100 && scrollView.contentOffset.x <= 400{
+            self.backgroundPic.image = UIImage(named: "1")
+        }
+        if scrollView.contentOffset.x > 400 && scrollView.contentOffset.x <= 670{
+            self.backgroundPic.image = UIImage(named: "2")
+        }
+        if scrollView.contentOffset.x > 670 && scrollView.contentOffset.x <= 970{
+            self.backgroundPic.image = UIImage(named: "3")
+        }
+        if scrollView.contentOffset.x > 970 && scrollView.contentOffset.x <= 1062{
+            self.backgroundPic.image = UIImage(named: "4")
+        }
     }
-    
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetail" {
             let DestinationView = segue.destinationViewController as! DetailViewController

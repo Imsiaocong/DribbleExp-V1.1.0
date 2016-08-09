@@ -25,25 +25,25 @@
                                     <constraint firstAttribute="width" constant="600" id="S1y-UY-KWU"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zkj-ZI-EbZ">
-                                    <size key="itemSize" width="277" height="495"/>
+                                    <size key="itemSize" width="245" height="429"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" id="bCR-52-B7K">
+                                <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" id="bCR-52-B7K">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YxH-Wn-Lxk" customClass="CollectionViewCell" customModule="Dribble" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="53" width="277" height="495"/>
+                                        <rect key="frame" x="12" y="86" width="245" height="429"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="277" height="495"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="245" height="429"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-Dc-c1E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="277" height="495"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="429"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4f-zn-IrT">
                                                     <rect key="frame" x="8" y="8" width="92" height="21"/>
@@ -55,66 +55,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85I-Un-sWU">
-                                                    <rect key="frame" x="105" y="369" width="67" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="3la-Ic-NLE"/>
-                                                        <constraint firstAttribute="width" constant="67" id="Lul-ZC-L3i"/>
-                                                        <constraint firstAttribute="height" constant="21" id="Zhy-9C-7J0"/>
-                                                        <constraint firstAttribute="height" constant="21" id="fAX-eI-g9i"/>
-                                                        <constraint firstAttribute="width" constant="67" id="mt5-k3-vW0"/>
-                                                        <constraint firstAttribute="width" constant="67" id="p3u-jN-e3n"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="89" y="360" width="67" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="3la-Ic-NLE"/>
-                                                            <exclude reference="Lul-ZC-L3i"/>
-                                                            <exclude reference="fAX-eI-g9i"/>
-                                                            <exclude reference="p3u-jN-e3n"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="85I-Un-sWU" secondAttribute="trailing" constant="47" id="0GD-Fu-qY1"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leading" constant="105" id="1p4-Jj-p16"/>
-                                            <constraint firstAttribute="trailing" secondItem="85I-Un-sWU" secondAttribute="trailing" constant="105" id="7d3-aX-kFh"/>
                                             <constraint firstAttribute="trailing" secondItem="W4w-Dc-c1E" secondAttribute="trailing" id="AXU-gL-MfC"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="top" secondItem="z4f-zn-IrT" secondAttribute="bottom" constant="253" id="Jj4-3A-jcH"/>
-                                            <constraint firstAttribute="bottom" secondItem="85I-Un-sWU" secondAttribute="bottom" constant="22" id="KJd-Bs-68k"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="top" secondItem="YxH-Wn-Lxk" secondAttribute="top" constant="236" id="MAm-e4-S7T"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="85I-Un-sWU" secondAttribute="bottom" constant="80" id="Mao-dJ-zbL"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="top" secondItem="YxH-Wn-Lxk" secondAttribute="top" constant="369" id="OZv-f1-O9Q"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="85I-Un-sWU" secondAttribute="bottom" constant="40" id="ExE-PT-TPt"/>
                                             <constraint firstItem="W4w-Dc-c1E" firstAttribute="top" secondItem="YxH-Wn-Lxk" secondAttribute="top" id="Px7-a8-a9H"/>
-                                            <constraint firstAttribute="bottom" secondItem="85I-Un-sWU" secondAttribute="bottom" constant="105" id="VWp-Qa-OgA"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leading" constant="48" id="Vp5-Wa-UvP"/>
-                                            <constraint firstAttribute="trailing" secondItem="85I-Un-sWU" secondAttribute="trailing" constant="72" id="WKk-7y-dFy"/>
+                                            <constraint firstItem="85I-Un-sWU" firstAttribute="centerX" secondItem="W4w-Dc-c1E" secondAttribute="centerX" id="RIj-8D-gA7"/>
                                             <constraint firstItem="z4f-zn-IrT" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leadingMargin" id="YAb-Fe-LWD"/>
-                                            <constraint firstAttribute="bottom" secondItem="85I-Un-sWU" secondAttribute="bottom" constant="88" id="eYE-Ka-HNo"/>
                                             <constraint firstItem="z4f-zn-IrT" firstAttribute="top" secondItem="YxH-Wn-Lxk" secondAttribute="topMargin" id="en3-xY-Vuw"/>
+                                            <constraint firstItem="85I-Un-sWU" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leadingMargin" constant="81" id="hYs-vX-2dH"/>
                                             <constraint firstAttribute="bottom" secondItem="W4w-Dc-c1E" secondAttribute="bottom" id="krZ-kc-n0a"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="centerX" secondItem="W4w-Dc-c1E" secondAttribute="centerX" id="m1U-cB-C7N"/>
-                                            <constraint firstItem="85I-Un-sWU" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leading" constant="72" id="mS0-3m-EG2"/>
                                             <constraint firstItem="W4w-Dc-c1E" firstAttribute="leading" secondItem="YxH-Wn-Lxk" secondAttribute="leading" id="t9D-Ty-bp1"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="0GD-Fu-qY1"/>
-                                                <exclude reference="Jj4-3A-jcH"/>
-                                                <exclude reference="KJd-Bs-68k"/>
-                                                <exclude reference="MAm-e4-S7T"/>
-                                                <exclude reference="Mao-dJ-zbL"/>
-                                                <exclude reference="Vp5-Wa-UvP"/>
-                                                <exclude reference="WKk-7y-dFy"/>
-                                                <exclude reference="eYE-Ka-HNo"/>
-                                                <exclude reference="m1U-cB-C7N"/>
-                                                <exclude reference="mS0-3m-EG2"/>
-                                            </mask>
-                                        </variation>
                                         <connections>
                                             <outlet property="cellImage" destination="W4w-Dc-c1E" id="pEd-FN-xP3"/>
                                             <outlet property="cellLabel" destination="85I-Un-sWU" id="7YB-8g-zIe"/>
@@ -134,6 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MA5-TZ-SQF"/>
                     <connections>
+                        <outlet property="backgroundPic" destination="bCR-52-B7K" id="DjY-SF-hxW"/>
                         <outlet property="collectionView" destination="xXB-Q4-kxc" id="ppr-dL-QN3"/>
                         <segue destination="iwn-94-ZPJ" kind="show" identifier="ShowDetail" id="EIP-dq-yKJ"/>
                     </connections>
@@ -203,6 +163,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="360" height="640"/>
+        <image name="0" width="750" height="1334"/>
     </resources>
 </document>
