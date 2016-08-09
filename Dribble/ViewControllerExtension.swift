@@ -20,10 +20,10 @@ extension ViewController {
         if scrollView.contentOffset.x > 400 && scrollView.contentOffset.x <= 670{
             self.backgroundPic.image = UIImage(named: "2")
         }
-        if scrollView.contentOffset.x > 670 && scrollView.contentOffset.x <= 970{
+        if scrollView.contentOffset.x > 670 && scrollView.contentOffset.x <= 850{
             self.backgroundPic.image = UIImage(named: "3")
         }
-        if scrollView.contentOffset.x > 970 && scrollView.contentOffset.x <= 1062{
+        if scrollView.contentOffset.x > 850 && scrollView.contentOffset.x <= 1062{
             self.backgroundPic.image = UIImage(named: "4")
         }
     }
