@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var weatherImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -135,6 +135,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         blur.effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         self.view.addSubview(blur)
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let pointX = scrollView.contentOffset.x
+        let sizeX = self.collectionView.frame.size.width / 2
+        let midX = pointX + sizeX
+        print(midX)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
