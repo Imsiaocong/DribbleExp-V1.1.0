@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController {
+extension ViewController{
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print(scrollView.contentOffset.x)
         if scrollView.contentOffset.x > 0 && scrollView.contentOffset.x <= 100{

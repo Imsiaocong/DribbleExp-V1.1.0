@@ -177,7 +177,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             
             if DestinationView.label.text! == "Taylor Swift" {
-               DestinationView.view.backgroundColor = UIColor.whiteColor()
+               DestinationView.view.backgroundColor = UIColor.clearColor()
                DestinationView.scrollView.addSubview(DestinationView.detailView)
             let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
                 cus.customizedView()
@@ -185,19 +185,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }else if DestinationView.label.text == "Albums" {
                 
                 
-                DestinationView.view.backgroundColor = UIColor.whiteColor()
+                DestinationView.view.backgroundColor = UIColor.clearColor()
                 
                 
             }else if DestinationView.label.text == "Concerts" {
                 
                 
-                DestinationView.view.backgroundColor = UIColor.cyanColor()
+                DestinationView.view.backgroundColor = UIColor.clearColor()
                 
                 
             }else if DestinationView.label.text == "Website" {
                 
                 
-                DestinationView.view.backgroundColor = UIColor.darkGrayColor()
+                DestinationView.view.backgroundColor = UIColor.clearColor()
                 
                 
             }else if DestinationView.label.text == "Blog" {
