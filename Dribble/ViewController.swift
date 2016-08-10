@@ -131,7 +131,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellLabel.text = ttlArray[indexPath.row]
         cell.cellLabel.adjustsFontSizeToFitWidth = true
         cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
-        cell.layer.cornerRadius = 10
+        cell.layer.cornerRadius = 5
         /*
         cell.layer.shadowOpacity = 1
         cell.layer.shadowRadius = 10
