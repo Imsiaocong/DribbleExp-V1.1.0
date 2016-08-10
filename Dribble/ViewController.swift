@@ -132,13 +132,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellLabel.adjustsFontSizeToFitWidth = true
         cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
         cell.layer.cornerRadius = 5
-        /*
+        
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.masksToBounds = false
         cell.layer.shadowOpacity = 1
-        cell.layer.shadowRadius = 10
-        cell.layer.shadowOffset = CGSizeMake(200, 200)
+        cell.layer.shadowRadius = 5
+        cell.layer.shadowOffset = CGSizeMake(0, 5)
         cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).CGPath
-        cell.layer.shouldRasterize = true
-        */
+        
         return cell
     }
     
@@ -170,6 +171,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //let snapshotView = self.view.snapshotViewAfterScreenUpdates(false)
         if segue.identifier == "ShowDetail" {
             let DestinationView = segue.destinationViewController as! DetailViewController
             DestinationView.image = self.selectedCell.cellImage.image
@@ -177,6 +179,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             
             if DestinationView.label.text! == "Taylor Swift" {
+                //DestinationView.view.addSubview(snapshotView)
                DestinationView.view.backgroundColor = UIColor.clearColor()
                DestinationView.scrollView.addSubview(DestinationView.detailView)
             let cus = TheSecondView(desitination: DestinationView, label: DestinationView.label, extra: DestinationView.extra)
