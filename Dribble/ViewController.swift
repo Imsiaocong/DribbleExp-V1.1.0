@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var weatherImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundPic: UIImageView!
+    var didShow: Bool!
     var selectedCell = CollectionViewCell()
     var currentImage = ""
     var image: UIImage!
@@ -57,10 +58,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.headerView.effect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
         self.headerView.alpha = 1
         self.headerView.backgroundColor = UIColor.clearColor()
+        self.didShow = false
         self.view.addSubview(headerView)
-        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
+        
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseOut, animations: { 
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-            }, completion: nil)
+            }) { (Bool) in
+                self.didShow = true
+        }
 
         self.backgroundPic.addSubview(blur2)
         //self.backgroundPicture()
@@ -226,17 +231,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func headerViewAnimation() {
+        if didShow == true {
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
-            }, completion: nil)
+            }, completion:{ (Bool) in
+                self.didShow = false
+        })
+        }
     }
     
     func headerViewAnimation2() {
+        if didShow == false {
         self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
 
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseInOut, animations: {
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-            }, completion: nil)
+            }, completion: { (Bool) in
+                self.didShow = true
+        })
     }
-
+    }
 }
