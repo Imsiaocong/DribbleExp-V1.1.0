@@ -126,20 +126,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        //let shadowLayer = CAShapeLayer()
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         cell.cellImage.image = UIImage(named: imgArray[indexPath.row])
         cell.cellLabel.text = ttlArray[indexPath.row]
         cell.cellLabel.adjustsFontSizeToFitWidth = true
         cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
         cell.layer.cornerRadius = 5
-        
+        /*
         cell.layer.shadowColor = UIColor.blackColor().CGColor
         cell.layer.masksToBounds = false
         cell.layer.shadowOpacity = 1
         cell.layer.shadowRadius = 5
         cell.layer.shadowOffset = CGSizeMake(0, 5)
         cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).CGPath
-        
+        */
         return cell
     }
     
