@@ -133,14 +133,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellLabel.adjustsFontSizeToFitWidth = true
         cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
         cell.layer.cornerRadius = 5
-        /*
+        cell.contentView.layer.borderWidth = 0.5
+        cell.contentView.layer.borderColor = UIColor.clearColor().CGColor
+        cell.contentView.layer.masksToBounds = true
+        cell.contentView.layer.cornerRadius = 5
+        
         cell.layer.shadowColor = UIColor.blackColor().CGColor
         cell.layer.masksToBounds = false
-        cell.layer.shadowOpacity = 1
+        cell.layer.shadowOpacity = 0.5
         cell.layer.shadowRadius = 5
         cell.layer.shadowOffset = CGSizeMake(0, 5)
         cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).CGPath
-        */
+        
         return cell
     }
     
