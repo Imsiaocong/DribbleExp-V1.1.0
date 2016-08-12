@@ -131,7 +131,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.cellImage.image = UIImage(named: imgArray[indexPath.row])
         cell.cellLabel.text = ttlArray[indexPath.row]
         cell.cellLabel.adjustsFontSizeToFitWidth = true
-        cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 17)
+        cell.cellLabel.font = UIFont(name: "STHeitiTC-Light", size: 30)
         cell.layer.cornerRadius = 5
         cell.contentView.layer.borderWidth = 0.5
         cell.contentView.layer.borderColor = UIColor.clearColor().CGColor
