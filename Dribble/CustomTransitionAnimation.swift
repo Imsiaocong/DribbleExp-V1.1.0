@@ -66,6 +66,7 @@ class CustomTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning
             transitionContext.completeTransition(true)
             UIView.animateWithDuration(1, animations: {
                 //toView.moveToOffSet()
+                fromView.selectedCell.layer.shadowOpacity = 0
             })
         }
     }

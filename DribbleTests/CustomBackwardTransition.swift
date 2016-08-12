@@ -62,6 +62,7 @@ class CustomBackwardTransition: NSObject, UIViewControllerAnimatedTransitioning 
             fromVC.detailLabel.hidden = false
             
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            toVC.selectedCell.layer.shadowOpacity = 0.5
         }
     }
     
