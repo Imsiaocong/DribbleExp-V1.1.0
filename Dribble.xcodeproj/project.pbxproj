@@ -21,6 +21,7 @@
 		01C637581D293FC40044DD89 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C637571D293FC40044DD89 /* CollectionViewCell.swift */; };
 		01C6375C1D2940C60044DD89 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6375B1D2940C60044DD89 /* DetailViewController.swift */; };
 		01C6375E1D2940E70044DD89 /* CustomTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */; };
+		01CD5DF91D5F503900ED78F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD5DF81D5F503900ED78F7 /* WelcomeViewController.swift */; };
 		01FF9CA31D490760002A9ECE /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		01C637571D293FC40044DD89 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		01C6375B1D2940C60044DD89 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		01C6375D1D2940E70044DD89 /* CustomTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTransitionAnimation.swift; path = ../Dribble/CustomTransitionAnimation.swift; sourceTree = "<group>"; };
+		01CD5DF81D5F503900ED78F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		01FF9CA21D490760002A9ECE /* CLTypingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				01C637291D293B460044DD89 /* AppDelegate.swift */,
 				01C6372B1D293B460044DD89 /* ViewController.swift */,
 				010373A01D58D28900C75D1C /* ViewControllerExtension.swift */,
+				01CD5DF81D5F503900ED78F7 /* WelcomeViewController.swift */,
 				01C637571D293FC40044DD89 /* CollectionViewCell.swift */,
 				01C6375B1D2940C60044DD89 /* DetailViewController.swift */,
 				01C6372D1D293B460044DD89 /* Main.storyboard */,
@@ -303,6 +306,7 @@
 			files = (
 				01C6372C1D293B460044DD89 /* ViewController.swift in Sources */,
 				01C6372A1D293B460044DD89 /* AppDelegate.swift in Sources */,
+				01CD5DF91D5F503900ED78F7 /* WelcomeViewController.swift in Sources */,
 				01C6375E1D2940E70044DD89 /* CustomTransitionAnimation.swift in Sources */,
 				011B0E681D412DEE00217424 /* CustomBackwardTransition.swift in Sources */,
 				01C637581D293FC40044DD89 /* CollectionViewCell.swift in Sources */,

@@ -6,6 +6,24 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="S1n-fT-yqY">
+            <objects>
+                <viewController id="gDM-sf-FQh" customClass="WelcomeViewController" customModule="Dribble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JO0-id-fUb"/>
+                        <viewControllerLayoutGuide type="bottom" id="67j-ty-oDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5X3-Kz-fo3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCb-P0-1dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="-286"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="bav-Cs-lbh">
             <objects>
@@ -104,6 +122,7 @@
                         <outlet property="backgroundPic" destination="bCR-52-B7K" id="DjY-SF-hxW"/>
                         <outlet property="collectionView" destination="xXB-Q4-kxc" id="ppr-dL-QN3"/>
                         <segue destination="iwn-94-ZPJ" kind="show" identifier="ShowDetail" id="EIP-dq-yKJ"/>
+                        <segue destination="gDM-sf-FQh" kind="show" identifier="Welcome" id="Ac2-Yz-IcF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMp-0L-cvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
