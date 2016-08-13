@@ -27,4 +27,13 @@ extension ViewController{
             self.backgroundPic.image = UIImage(named: "4")
         }
     }
+    
+    func addContent(state: didApear) {
+        switch state {
+        case .yes:
+            print("Yes!")
+        case .no:
+            print("No!")
+        }
+    }
 }

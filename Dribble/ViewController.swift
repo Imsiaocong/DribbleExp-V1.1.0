@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum didApear {
+    case yes
+    case no
+}
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var weatherImg: UIImageView!
@@ -60,6 +65,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.headerView.backgroundColor = UIColor.clearColor()
         self.didShow = false
         self.view.addSubview(headerView)
+        addContent(.yes)
         
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 6, options: .CurveEaseOut, animations: { 
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
@@ -244,6 +250,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0)
             }, completion:{ (Bool) in
                 self.didShow = false
+                self.addContent(.no)
         })
         }
     }
@@ -256,6 +263,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
             }, completion: { (Bool) in
                 self.didShow = true
+                self.addContent(.yes)
         })
     }
     }

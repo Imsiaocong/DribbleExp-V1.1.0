@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum didFinish {
+enum didShow {
     case yes
     case no
 }
@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
     var picLayer: CAShapeLayer!
     var model: AnyObject!
     let offSet = CGPoint(x: 0, y: 600)
+    let targetView = ViewController()
     private var percentDrivenTransition: UIPercentDrivenInteractiveTransition?
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -37,7 +38,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, UINavigation
         self.detailView = UIView()
         self.detailView.frame = CGRect(x: 0, y: 700, width: self.view.frame.size.width, height: 800)
         self.detailView.addSubview(extra)
-        
         self.detailImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         self.scrollView.addSubview(detailImage)
         self.detailLabel.text = self.label.text
